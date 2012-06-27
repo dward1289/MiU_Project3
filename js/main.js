@@ -22,16 +22,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectList.appendChild(makeSelect);
 	}
 	
-	//Find value of selected checkbox.
-	var checkedbox = function () {
-	if(elId("home").checked) {
-		categoryValue = elId("home").value;
-		}
-	if(elId("business").checked){
-		categoryValue = elId("business").value;
-			}	
-	if(elId("school").checked) {
-		categoryValue = elId("school").value;
+	//Find value of selected radio button.
+	var radiobox = function () {
+		var radios = document.forms[0].whichCategory;
+		for(var i=0; i<radios.length; i++) {
+			if(radios[i].checked) {
+				whichCategoryValue = radios[i].value;
+				}
 			}
 		}
 	
@@ -72,10 +69,10 @@ window.addEventListener("DOMContentLoaded", function(){
 				
 		//Get all form field values and store in object
 		//Object properties contain array w/from label and input value
-		checkedbox();
+		radiobox();
 		var item = {};
 		item.name = ["Name of Task: ", elId("taskName").value];
-		item.category = ["Category: ", categoryValue];
+		item.category = ["Category: ", whichCategoryValue];
 		item.priorityLevel = ["Priority: ", elId("priorities").value];
 		item.startUp = ["Starting Date of Task: ", elId("taskDate").value];
 		item.ending = ["Ending Date of Task: ", elId("taskEnd").value];
@@ -300,6 +297,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Variable defaults
 	var priorityGroup = ["--Choose Priority Level--","High","Medium","Low"];
+	var whichCategoryValue;
 	makeDrop();
 	errMsg = elId("errors");
 	
