@@ -1,0 +1,71 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+	
+</head>
+
+<body>
+
+<div data-role="page" id="home">
+	<div data-role="header" data-position="fixed">
+	<!--Title-->
+	<h1>Remind Me Later</h1>
+	</div>
+	
+<div data-role="content">
+	<!--Content Goes Here-->
+<img src="http://i24.photobucket.com/albums/c39/youngbutcute07/feature-1.png" alt="Feature" width= "300px" id="feature"/>
+
+<ul data-role="listview" data-inset="true" data-filter="true">
+		<li><a href="additem.html" data-role="button">Add New Task</a><li/>
+		
+		<li><div data-role="collapsible" data-iconpos="right"><h3><a href= "#" id="displayData2">Display Saved Tasks</a></h3><p><div id="seeHere"></div></p></div><li/>
+		
+		<li><div data-role="collapsible" data-iconpos="right"><h3>About</h3><p>Name: Remind Me Later Version: 1.0.2</br> New Features Added: Easier navigation.</br>Creator: Devona Ward</p><li/>
+		<li><div data-role="collapsible" data-iconpos="right"><h3>Help</h3><p>Create a task: Tap "Add New Task"</br> View all tasks: Tap "View Saved Tasks"</br>
+Edit Task: Tap "View Saved Tasks", and tap "Edit Task".</br> Delete Task: tap "Delete Task" to delete a task.</p><li/>
+		<li><div data-role="collapsible" data-iconpos="right"><h3>Contact</h3><p>I want "Remind Me Later" to be as useful to you as</br> possible. For any comments, or suggestions please </br>contact me at: <b>dward1289@gmail.com</b></p>
+</ul>
+</div>
+
+<div data-role="footer" data-position="fixed">
+	<!--Footer-->
+	<div data-role="navbar">
+	<ul>
+	</ul>
+	</div><!-- /navbar -->
+	<h1>MadGeek(2012) 1.0.2</h1>
+	</div><!--footer end-->
+</div>
+
+	<!-- JavaScript under here -->
+	<script type="text/javascript" src="js/getIt.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

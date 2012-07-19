@@ -1,0 +1,116 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+
+	
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+</head>
+
+<body>
+
+<div data-role="page" id="taskForm">
+	<div data-role="header" data-position="fixed">
+	<!--Title-->
+	<h1>Remind Me Later</h1>
+	</div>
+	
+<div data-role="content">
+	<!--Content Goes Here-->
+	<div id="seeHere"></div>
+	<form action= "" method="get" id="thisHere" >
+		
+		<div data-role="fieldcontain">
+			<label for="taskName">Name of Task:</label>
+			<input type="text" name="nameTask" id="taskName" class="required" placeholder="Please enter name of task"/>
+		</div>
+			<div data-role="fieldcontain">	
+			<!--Radioboxes-->
+			<fieldset data-role="controlgroup">
+				<legend>Select Category:</legend>
+				<input type="radio" value="Home" name="whichCategory" id="home" class="required"/>
+				<label for="home">Home</label>
+				<input type="radio" value="School" name="whichCategory" id="school" />
+				<label for="school">School</label>
+				<input type="radio" value="Business" name="whichCategory" id="business" />
+				<label for="business">Business</label>
+		</div>
+
+		<div data-role="fieldcontain">	
+		<!--Date select-->
+		<ul class="dateSelects">
+			<li><label for="taskDate">Starting Date of Task:</label><input type="text" id="taskDate" placeholder="Jun 12, 1989" class="required"/></li>
+			<li><label for="taskEnd">Ending Date of Task:</label><input type="text" id="taskEnd" placeholder="Jun 12, 1989"/></li>
+		</ul>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<legend for="priority" id="select" class="required">Select Priority:</legend>
+			
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="taskDate">Alert Type:</label>
+			<input type="range" name="alert" id="alertWay" value="1" min="1" max="3"/>
+		</div>
+	
+		<div data-role="fieldcontain">
+			<label for="notes">Notes:</label>
+			<textarea id="notes" placeholder="Write a note here."></textarea>
+		</div>
+		
+		<center><div data-role="controlgroup" data-type="horizontal">
+		<input type="reset" value="Clear" data-icon="delete" data-iconpos="right"/>
+		<input type="submit" id="submit" value="Submit" data-icon="check" data-iconpos="right"/>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal">
+		<a href= "#" id="displayData" data-ajax="false"><button id="secButton">Display Data</button></a>
+		<a href= "#" id="clear" data-ajax="false"><button id="secButton">Clear Stored Data</button></a>	
+		</div></center>	
+	</form>
+</div>
+
+	
+<div data-role="footer" data-position="fixed">
+	<!--Footer-->
+	<div data-role="navbar">
+	<ul>
+		<li><a href="#home" data-ajax="false">Home</a></li>
+		<li><a href="contact.html" data-ajax="false">Contact</a></li>
+		<li><a href="help.html" data-ajax="false">Help</a></li>
+	</ul>
+	</div><!-- /navbar -->
+	<h1>MadGeek(2012) 1.0.2</h1>
+	</div><!--footer end-->
+</div>
+
+<!-- JavaScript under here -->
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/json.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
